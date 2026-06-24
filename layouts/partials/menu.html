@@ -73,7 +73,9 @@
  {{with .sect}}
   {{if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{safeHTML .Params.head}}
+    {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
     <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item
+        {{if ne $numberOfPages 0}}has-children{{end}}
         {{if .IsAncestor $currentNode }}parent{{end}}
         {{if eq .File.UniqueID $currentFileUniqueID}}active{{end}}
         {{if .Params.alwaysopen}}parent{{end}}
@@ -84,7 +86,9 @@
             <i class="fas fa-check read-icon"></i>
           {{ end }}
       </a>
-      {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
+      {{ if ne $numberOfPages 0 }}
+      <span class="dd-toggle" role="button" tabindex="0" aria-label="Auf- oder zuklappen"><i class="fas fa-chevron-right"></i></span>
+      {{ end }}
       {{ if ne $numberOfPages 0 }}
         <ul>
           {{ $currentNode.Scratch.Set "pages" .Pages }}

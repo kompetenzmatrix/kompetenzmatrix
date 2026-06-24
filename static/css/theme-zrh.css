@@ -229,3 +229,42 @@ a:hover {
     background: #fdf0e3;
     color: #b26a00;
 }
+
+/* Collapsible Sidebar-Menü (Cluster/Module auf-/zuklappbar) */
+#sidebar .dd-item {
+    position: relative;
+}
+#sidebar .dd-item > a {
+    padding-right: 32px; /* Platz für Chevron */
+}
+#sidebar .dd-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--MENU-SECTIONS-LINK-color);
+    opacity: 0.7;
+    z-index: 2;
+}
+#sidebar .dd-toggle:hover {
+    opacity: 1;
+    color: var(--MENU-SECTIONS-LINK-HOVER-color);
+}
+#sidebar .dd-toggle i {
+    transition: transform 0.15s ease;
+    font-size: 0.8rem;
+}
+/* offen: Chevron gedreht + Kinder sichtbar */
+#sidebar ul.topics .dd-item.open > .dd-toggle i,
+#sidebar ul.topics .dd-item.parent > .dd-toggle i,
+#sidebar ul.topics .dd-item.active > .dd-toggle i {
+    transform: rotate(90deg);
+}
+#sidebar ul.topics .dd-item.open > ul {
+    display: block;
+}

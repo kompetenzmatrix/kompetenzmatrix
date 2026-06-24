@@ -8,3 +8,27 @@
 
   gtag('config', 'G-RPFHCRPJ3Q');
 </script>
+
+<!-- Collapsible Sidebar-Menü -->
+<script>
+(function () {
+  function toggle(el) {
+    var item = el.closest('.dd-item');
+    if (item) item.classList.toggle('open');
+  }
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('.dd-toggle');
+    if (!t) return;
+    e.preventDefault();
+    e.stopPropagation();
+    toggle(t);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var t = e.target.closest && e.target.closest('.dd-toggle');
+    if (!t) return;
+    e.preventDefault();
+    toggle(t);
+  });
+})();
+</script>
