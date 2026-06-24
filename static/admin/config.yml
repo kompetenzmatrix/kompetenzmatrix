@@ -27,12 +27,12 @@ collections:
     create: true
     identifier_field: title
     fields: &modulfelder
-      - { label: "Titel", name: title, widget: string }
-      - { label: "Modul (Ordnername, z.B. m183)", name: modul, widget: string, pattern: ['^m?[a-z]*\d+$', 'z.B. m183 oder ma1'] }
+      - { label: "Titel", name: title, widget: hidden }
+      - { label: "Modul (Ordnername, z.B. m183)", name: modul, widget: hidden }
       - { label: "Cluster", name: cluster, widget: hidden }
       - { label: "Datum", name: date, widget: hidden, required: false }
       - { label: "ID-Reihenfolge", name: idorder, widget: hidden, required: false }
-      - { label: "ÜK-Modul (keine Matrix)", name: uek, widget: boolean, default: false, required: false }
+      - { label: "ÜK-Modul (keine Matrix)", name: uek, widget: hidden, default: false, required: false }
       - label: "Kompetenzbänder"
         name: kompetenzbaender
         widget: list
