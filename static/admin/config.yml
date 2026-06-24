@@ -3,8 +3,8 @@ backend:
   repo: kompetenzmatrix/kompetenzmatrix
   branch: main
   # Self-hosted OAuth relay on it.bzz.ch (PHP). No Cloudflare/Netlify account needed.
-  base_url: https://it.bzz.ch
-  auth_endpoint: /cms-oauth/auth
+  base_url: https://kompetenzmatrix.ch
+  auth_endpoint: cms-oauth/auth
 
 # Open authoring: any GitHub user logs in, the CMS forks the repo for them and
 # opens a Pull Request from their fork. No collaborator access / account management.
