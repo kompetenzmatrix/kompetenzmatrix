@@ -1,11 +1,8 @@
 ---
-aliases:
-  - /cluster-api/m426/
-  - /v2/cluster-api/m426/
 title: M426 Software mit agilen Methoden entwickeln
 modul: m426
 cluster: cluster-api
-date: "2025-07-02T10:04:57Z"
+date: 2025-07-02T10:04:57Z
 draft: false
 kompetenzbaender:
   - id: A
@@ -107,6 +104,6 @@ kompetenzbaender:
 ---
 ### Hinweis
 
-Eine Softwarekomponente kann auch mit Hilfe eines Entwurfsmusters umgesetzt sein. Darum wird im Handlungsziel das Entwurfsmuster nicht explizit aufgeführt und dem HZ trotzdem Rechnung getragen.
+Eine Softwarekomponente kann auch mit Hilfe eines Entwurfsmusters umgesetzt sein. Darum wird im Handlungsziel das Entwurfsmuster nicht explizit aufgeführt und dem Handlungsziel trotzdem Rechnung getragen.
 
 - - -
