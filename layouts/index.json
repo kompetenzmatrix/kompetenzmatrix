@@ -1,0 +1,17 @@
+[{{ range $index, $page := .Site.Pages }}
+{{- if ne $page.Type "json" -}}
+{{- /* Modul-Unterseiten (Umsetzungsvorschlag, Handlungssituationen, …) NICHT indexieren,
+       damit eine Suche nach der Modulnummer nur die Modul-Hauptseite zurückgibt. */ -}}
+{{- if and (eq $page.Kind "page") $page.Parent.Params.modul -}}
+{{- else -}}
+{{- if and $index (gt $index 0) -}},{{- end }}
+{
+	"uri": "{{ $page.Permalink }}",
+	"title": "{{ htmlEscape $page.Title}}",
+	"tags": [{{ range $tindex, $tag := $page.Params.tags }}{{ if $tindex }}, {{ end }}"{{ $tag| htmlEscape }}"{{ end }}],
+	"description": "{{ htmlEscape .Description}}",
+	"content": {{$page.Plain | jsonify}}
+}
+{{- end -}}
+{{- end -}}
+{{- end -}}]
