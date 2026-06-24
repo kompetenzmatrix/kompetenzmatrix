@@ -1,0 +1,35 @@
+{{- $order := .Params.idorder | default "num_lvl" -}}
+<table class="kompetenzmatrix">
+  <thead>
+    <tr>
+      <th>Kompetenzband</th>
+      <th>HZ</th>
+      <th>Grundlagen</th>
+      <th>Fortgeschritten</th>
+      <th>Erweitert</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{- range $band := .Params.kompetenzbaender }}
+    {{- $n := len $band.kompetenzen }}
+    {{- range $i, $k := $band.kompetenzen }}
+      {{- $nr := int $k.nr }}
+      {{- $g := "" }}{{ $f := "" }}{{ $e := "" }}
+      {{- if eq $order "lvl_num" }}
+        {{- $g = printf "%sG%d" $band.id $nr }}{{ $f = printf "%sF%d" $band.id $nr }}{{ $e = printf "%sE%d" $band.id $nr }}
+      {{- else }}
+        {{- $g = printf "%s%dG" $band.id $nr }}{{ $f = printf "%s%dF" $band.id $nr }}{{ $e = printf "%s%dE" $band.id $nr }}
+      {{- end }}
+    <tr>
+      {{- if eq $i 0 }}
+      <td rowspan="{{ $n }}"><strong>{{ $band.id }}</strong> – {{ $band.titel }}</td>
+      {{- end }}
+      <td>{{ $k.hz }}</td>
+      <td><strong>{{ $g }}:</strong> {{ $k.grundlagen }}</td>
+      <td><strong>{{ $f }}:</strong> {{ $k.fortgeschritten }}</td>
+      <td><strong>{{ $e }}:</strong> {{ $k.erweitert }}</td>
+    </tr>
+    {{- end }}
+  {{- end }}
+  </tbody>
+</table>

@@ -1,0 +1,49 @@
+baseURL = "https://kompetenzmatrix.ch/"
+
+languageCode = "de-ch"
+DefaultContentLanguage = "de"
+title = "Kompetenzmatrizen ZH"
+theme = "hugo-theme-learn"
+
+metaDataFormat = "yaml"
+
+defaultContentLanguage = "de"
+defaultContentLanguageInSubdir = false
+enableMissingTranslationPlaceholders = false
+
+disableLandingPageButton = false
+
+[build]
+  ignoreErrors = ["ref"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[[menu.shortcuts]]
+name = "Nach Ausbildungsjahr Applikationsentwicklung"
+url = "/ausbildungsjahrapi"
+weight = 11
+
+[[menu.shortcuts]]
+name = "Nach Ausbildungsjahr Plattformentwicklung"
+url = "/ausbildungsjahrplatform"
+weight = 12
+
+[[menu.shortcuts]]
+name = "Clusteraufbau"
+url = "/clusteraufbau"
+weight = 13
+
+[params]
+  description = "Öffentlich zugängliche Kompetenzmatrizen des Projekt Modulentwicklung ZH für die ICT-Module der Fachrichtungen Applikationsentwicklung und Plattformentwicklung nach BiVo2021"
+  author = "BZZ, TBZ, BBW, BFSU"
+  showVisitedLinks = false
+  disableBreadcrumb = false
+  disableNextPrev = false
+  disableLandingPageButton = false
+  disableMermaid = true
+  titleSeparator = "::"
+  themeVariant = "zrh"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]

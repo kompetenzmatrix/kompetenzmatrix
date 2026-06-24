@@ -1,0 +1,48 @@
+# Kompetenzmatrizen ZH
+
+Öffentlich zugängliche Kompetenzmatrizen des Projekts **Modulentwicklung ZH** für die ICT-Module
+der Fachrichtungen Applikationsentwicklung und Plattformentwicklung nach **BiVo2021**.
+
+Live: **https://kompetenzmatrix.ch** · Bearbeiten: **/admin/** (Sveltia CMS)
+
+## Was ist das hier?
+
+Das **Arbeitsrepo** (Single Source of Truth) für die Matrizen. Inhalt = strukturierte YAML-Daten,
+gerendert mit [Hugo](https://gohugo.io) (+ Theme `hugo-theme-learn` als Submodul).
+
+```
+content/<cluster>/<modul>/
+  _index.md               # Kompetenzmatrix (YAML) + Bloom-Analyse/Änderungsprotokoll
+  umsetzungsvorschlag.md   # Lektionsplanung
+  handlungssituationen.md  # Handlungssituationen
+layouts/                   # Matrix-Rendering (partials/matrix.html) + Navigation
+static/admin/              # Sveltia CMS (Web-Editor)
+schema/                    # JSON-Schema der Moduldaten
+scripts/validate_modules.py# CI-Validierung (EHB-Regeln)
+.github/workflows/         # validate.yml (PR) + deploy.yml (rsync nach it.bzz.ch)
+```
+
+Cluster: `cluster-api`, `cluster-cloud`, `cluster-data`, `cluster-math`, `cluster-org`,
+`cluster-platform`.
+
+## Versionen
+
+`main` enthält die aktuelle (vormals „v2") Matrix. Die alte **Version 1** ist auf dem Branch
+`v1-archive` eingefroren (nicht in Bearbeitung, nicht auf der Website).
+
+## Lokale Entwicklung
+
+```bash
+git clone --recurse-submodules <repo-url>
+cd kompetenzmatrix
+hugo server
+```
+
+## Beitragen
+
+Siehe [CONTRIBUTING.md](CONTRIBUTING.md) — Editieren via CMS oder PR, inkl. EHB-Inhaltsregeln.
+
+## Setup-Hinweise (einmalig)
+
+- **CMS-Auth**: GitHub-OAuth-App + `sveltia-cms-auth`-Relay; URL in `static/admin/config.yml` (`base_url`) eintragen.
+- **Deploy-Secrets**: `DEPLOY_SSH_KEY` (Secret) + `DEPLOY_PATH` (Variable) für `root@it.bzz.ch`.

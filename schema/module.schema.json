@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kompetenzmatrix.ch/schema/module.schema.json",
+  "title": "Kompetenzmatrix-Modul",
+  "description": "Frontmatter schema for content/<cluster>/<module>/_index.md. Enforced by scripts/validate_modules.py.",
+  "type": "object",
+  "required": ["title", "modul", "cluster"],
+  "properties": {
+    "title": { "type": "string" },
+    "modul": { "type": "string", "pattern": "^m?[a-z]*[0-9]+$" },
+    "cluster": { "type": "string" },
+    "date": { "type": "string" },
+    "draft": { "type": "boolean" },
+    "uek": { "type": "boolean", "description": "true = ÜK module without a matrix" },
+    "idorder": { "type": "string", "enum": ["num_lvl", "lvl_num"], "description": "Cell-id order: A1G (num_lvl, default) vs WG1 (lvl_num)" },
+    "kompetenzbaender": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "titel", "kompetenzen"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[A-Z]+$" },
+          "titel": { "type": "string", "minLength": 1 },
+          "kompetenzen": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["nr", "grundlagen", "fortgeschritten", "erweitert"],
+              "properties": {
+                "nr": { "type": "integer", "minimum": 1 },
+                "hz": { "type": "string" },
+                "grundlagen": { "type": "string", "pattern": "^Ich kann" },
+                "fortgeschritten": { "type": "string", "pattern": "^Ich kann" },
+                "erweitert": { "type": "string", "pattern": "^Ich kann" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "uek": { "const": true } }, "required": ["uek"] },
+      "then": {},
+      "else": { "required": ["kompetenzbaender"] }
+    }
+  ]
+}

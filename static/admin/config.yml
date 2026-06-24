@@ -1,0 +1,122 @@
+backend:
+  name: github
+  repo: kompetenzmatrix/kompetenzmatrix
+  branch: main
+  # Sveltia needs a GitHub OAuth app + a small auth relay. Deploy the free
+  # `sveltia-cms-auth` Cloudflare Worker (or host on it.bzz.ch) and set its URL here:
+  base_url: https://CHANGEME-sveltia-auth.example.workers.dev
+
+# Changes are committed to a working branch and opened as a Pull Request (review before publish).
+publish_mode: editorial_workflow
+
+# Locale / UI
+locale: de
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: cluster-api
+    label: "Applikationsentwicklung"
+    label_singular: "Modul"
+    folder: content/cluster-api
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: &modulfelder
+      - { label: "Titel", name: title, widget: string }
+      - { label: "Modul (Ordnername, z.B. m183)", name: modul, widget: string, pattern: ['^m?[a-z]*\d+$', 'z.B. m183 oder ma1'] }
+      - { label: "Cluster", name: cluster, widget: hidden }
+      - { label: "Datum", name: date, widget: hidden, required: false }
+      - { label: "ID-Reihenfolge", name: idorder, widget: hidden, required: false }
+      - { label: "ÜK-Modul (keine Matrix)", name: uek, widget: boolean, default: false, required: false }
+      - label: "Kompetenzbänder"
+        name: kompetenzbaender
+        widget: list
+        required: false
+        summary: "{{fields.id}} – {{fields.titel}}"
+        fields:
+          - { label: "Band-ID (A, B, C …)", name: id, widget: string, pattern: ['^[A-Z]+$', 'Grossbuchstabe(n)'] }
+          - { label: "Bandtitel", name: titel, widget: string }
+          - label: "Kompetenzen"
+            name: kompetenzen
+            widget: list
+            summary: "Nr {{fields.nr}} (HZ {{fields.hz}})"
+            fields:
+              - { label: "Nr", name: nr, widget: number, value_type: int, min: 1 }
+              - { label: "Handlungsziele (HZ)", name: hz, widget: string, hint: "z.B. 1, 2" }
+              - { label: "Grundlagen", name: grundlagen, widget: text, pattern: ['^Ich kann', 'Muss mit „Ich kann" beginnen'] }
+              - { label: "Fortgeschritten", name: fortgeschritten, widget: text, pattern: ['^Ich kann', 'Muss mit „Ich kann" beginnen'] }
+              - { label: "Erweitert", name: erweitert, widget: text, pattern: ['^Ich kann', 'Muss mit „Ich kann" beginnen'] }
+      - { label: "Weiterer Inhalt (Bloom-Analyse, Änderungsprotokoll)", name: body, widget: markdown, required: false }
+
+  - name: cluster-cloud
+    label: "Cloud Computing"
+    label_singular: "Modul"
+    folder: content/cluster-cloud
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: *modulfelder
+
+  - name: cluster-data
+    label: "Daten und Datenhaltung"
+    label_singular: "Modul"
+    folder: content/cluster-data
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: *modulfelder
+
+  - name: cluster-math
+    label: "Mathematik"
+    label_singular: "Modul"
+    folder: content/cluster-math
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: *modulfelder
+
+  - name: cluster-org
+    label: "Organisation und Innovation"
+    label_singular: "Modul"
+    folder: content/cluster-org
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: *modulfelder
+
+  - name: cluster-platform
+    label: "Plattformentwicklung"
+    label_singular: "Modul"
+    folder: content/cluster-platform
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: *modulfelder
+
+  # Per-module supplementary pages (lesson plan / action situations)
+  - name: zusatzseiten
+    label: "Zusatzseiten (Umsetzung / Handlungssituationen)"
+    label_singular: "Seite"
+    folder: content
+    extension: md
+    format: yaml-frontmatter
+    create: false
+    nested: { depth: 4 }
+    identifier_field: title
+    fields:
+      - { label: "Titel", name: title, widget: string }
+      - { label: "Reihenfolge", name: weight, widget: number, value_type: int, required: false }
+      - { label: "Inhalt", name: body, widget: markdown }
