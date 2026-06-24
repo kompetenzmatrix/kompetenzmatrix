@@ -20,7 +20,7 @@ collections:
   - name: cluster-api
     label: "Applikationsentwicklung"
     label_singular: "Modul"
-    folder: content/cluster-api
+    folder: content/informatiker/cluster-api
     path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
@@ -56,7 +56,7 @@ collections:
   - name: cluster-cloud
     label: "Cloud Computing"
     label_singular: "Modul"
-    folder: content/cluster-cloud
+    folder: content/informatiker/cluster-cloud
     path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
@@ -67,7 +67,7 @@ collections:
   - name: cluster-data
     label: "Daten und Datenhaltung"
     label_singular: "Modul"
-    folder: content/cluster-data
+    folder: content/informatiker/cluster-data
     path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
@@ -78,7 +78,7 @@ collections:
   - name: cluster-math
     label: "Mathematik"
     label_singular: "Modul"
-    folder: content/cluster-math
+    folder: content/informatiker/cluster-math
     path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
@@ -89,7 +89,7 @@ collections:
   - name: cluster-org
     label: "Organisation und Innovation"
     label_singular: "Modul"
-    folder: content/cluster-org
+    folder: content/informatiker/cluster-org
     path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
@@ -100,7 +100,7 @@ collections:
   - name: cluster-platform
     label: "Plattformentwicklung"
     label_singular: "Modul"
-    folder: content/cluster-platform
+    folder: content/informatiker/cluster-platform
     path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter

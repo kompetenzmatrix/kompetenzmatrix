@@ -10,8 +10,12 @@
 </script>
 
 <!-- Immer sichtbare Aktionen: CMS bearbeiten + Repo -->
+{{- $editURL := "/admin/" -}}
+{{- if and .Params.modul .Params.cluster -}}
+  {{- $editURL = printf "/admin/#/collections/%s/entries/%s/_index" .Params.cluster .Params.modul -}}
+{{- end -}}
 <div class="fab-group">
-  <a class="edit-fab" href="/admin/" title="Inhalte bearbeiten (CMS)">
+  <a class="edit-fab" href="{{ $editURL }}" title="Diese Seite im CMS bearbeiten">
     <i class="fas fa-pen"></i><span>Bearbeiten</span>
   </a>
   <a class="repo-fab" href="https://github.com/kompetenzmatrix/kompetenzmatrix" target="_blank" rel="noopener" title="Quellcode auf GitHub">
