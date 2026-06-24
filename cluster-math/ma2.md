@@ -1,0 +1,15 @@
+---
+title: "MA2"
+date: 2025-07-02T10:05:56Z
+draft: false
+---
+
+| **Kompetenzband:**                                 | **HZ**  | **Grundlagen**                                               | **Fortgeschritten**                                          | **Erweitert**                                                |
+| -------------------------------------------------- | ------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Funktionen und deren Merkmale erkennen             | 1       | AG1:<br />Ich kann das EVA-Prinzip erklären und erläutern wie dies mittels Funktionsgleichung realisiert werden kann und ich kenne die wesentlichen Fachausdrücke in Bezug auf Funktionen und deren Notation. | AF1:<br />Ich kann konkrete Beispiele zu EVA und die Anwendung in Funktionen nennen. | KAE1:<br />Ich kann anspruchsvolle Situationen durch Funktionen mittels Worten beschreiben. |
+|                                                    |         | AG2:<br />Ich kann den Unterschied zwischen einem linearen, logarithmischen und exponentiellen Zusammenhang erklären. | AF2:<br />Ich kann anhand eines Sachverhalts erkennen, ob ein linearer oder exponentieller Zusammenhang vorliegt. | AE2:<br />Ich kann logarithmische Darstellungen und deren Zusammenhänge erkennen. |
+| Lineare Funktionen anwenden                        | 1, 2, 4 | BG1:<br />Ich kann aus einer gegebenen Funktionsgleichung Funktionswerte bestimmen und eine Wertetabelle erstellen. | BF1:<br />Ich kann für einen Sachverhalt (Datenwerte oder Beschreibung) mit linearem Verhalten die Funktionsgleichung aufstellen. | BE1:<br />Ich kann Nullstellen und Schnittpunkte berechnen.  |
+| Quadratische und exponentielle Funktionen anwenden | 2       | CG1:<br />Ich kann aus einer gegebenen Funktionsgleichung Funktionswerte bestimmen und eine Wertetabelle erstellen. | CF1:<br />Ich kann das Verhalten einer exponentiellen und quadratischen Funktion anhand der Parameter beschreiben. | CE1:<br />Ich kann aus Funktionswerten mit oder ohne Nullstellen und/oder Scheitelpunkt eine quadratische Funktionsgleichung aufstellen. |
+| Funktionen grafisch darstellen und interpretieren  | 1 3     | DG1: <br />Ich kenne den Aufbau des kartesischen Koordinatensystems und kann Funktionswerte bestimmen und interpretieren. <br />Ich kann das Verhalten eines Graphen beschreiben. | DF1:<br />Ich kann Funktionswerte in einen geeigneten Graphen überführen und die Achsen korrekt beschriften. | DE1:<br />Ich erkenne Ausprägungen (Schnittpunkte, Extremwerte etc.) und kann diese interpretieren. |
+|                                                    | 3       | DG2:<br />Ich kann einen Funktionsgraphen mittels Tool aufzeichnen. | DF2:<br />Ich kann in Funktionsgraphen beliebige Funktionswerte und Ausprägungen (Nullstellen, Scheitelpunkte, Maximalwerte etc.) bestimmen | DE2:<br />Ich kann Schnittpunkte und Steigungen in Funktionsgraphen bestimmen    |
+
