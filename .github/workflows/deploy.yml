@@ -49,6 +49,8 @@ jobs:
             ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts 2>/dev/null
           fi
           chmod 600 ~/.ssh/known_hosts
-          rsync -az --delete --exclude='cms-oauth/' \
+          # The CMS OAuth relay lives OUTSIDE this docroot (/var/www/cms-oauth, served
+          # via an Apache Alias), so --delete here can never touch it.
+          rsync -az --delete \
             -e "ssh -i ~/.ssh/id_deploy -o StrictHostKeyChecking=yes -o IdentitiesOnly=yes" \
             public/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH"

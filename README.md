@@ -46,11 +46,13 @@ Den vollständigen Ablauf (Bearbeiten → CI → Deploy) zeigt
 
 ## Setup-Hinweise (einmalig)
 
-- **CMS-Auth** (Open Authoring): selbst-gehostetes PHP-Relay auf dem Server unter
-  `https://kompetenzmatrix.ch/cms-oauth` (Code: `/var/www/kompetenzmatrix.ch/cms-oauth/index.php`).
-  GitHub-OAuth-App erstellen (Callback `https://kompetenzmatrix.ch/cms-oauth/callback`),
-  `client_id`/`client_secret` in `/etc/cms-oauth-config.php` eintragen. `base_url` steht in
-  `static/admin/config.yml`. Das Relay ist via `rsync --exclude=cms-oauth/` vor Deploys geschützt.
+- **CMS-Auth** (Open Authoring): selbst-gehostetes PHP-Relay unter
+  `https://kompetenzmatrix.ch/cms-oauth`. Code liegt **ausserhalb** des Deploy-Docroots in
+  `/var/www/cms-oauth/index.php` (root:root), via Apache-`Alias /cms-oauth` aus
+  `/etc/apache2/conf-available/cms-oauth.conf` (`FallbackResource` routet `/cms-oauth/*` →
+  `index.php`). So kann ein deploy-rsync das Relay nicht berühren. GitHub-OAuth-App erstellen
+  (Callback `https://kompetenzmatrix.ch/cms-oauth/callback`), `client_id`/`client_secret` in
+  `/etc/cms-oauth-config.php`. `base_url` steht in `static/admin/config.yml`.
 - **Deploy** (kein root!): Auf dem Server einen **unprivilegierten** Benutzer anlegen, dem nur
   das Web-Verzeichnis gehört:
   ```bash
