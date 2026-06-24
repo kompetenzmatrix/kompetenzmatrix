@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-org/m158/
+  - /v2/cluster-org/m158/
 title: M158 Software-Migration planen und durchführen
 modul: m158
 cluster: cluster-org

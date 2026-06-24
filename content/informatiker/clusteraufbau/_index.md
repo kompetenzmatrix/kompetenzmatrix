@@ -1,6 +1,7 @@
 ---
 aliases:
   - /clusteraufbau/
+  - /v2/clusteraufbau/
 title: Aufbau in Clustern
 ---
 

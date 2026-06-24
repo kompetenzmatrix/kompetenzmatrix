@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-org/m157/handlungssituationen/
+  - /v2/cluster-org/m157/handlungssituationen/
 title: Handlungssituationen
 weight: 20
 draft: false

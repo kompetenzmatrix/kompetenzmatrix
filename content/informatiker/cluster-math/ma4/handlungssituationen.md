@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-math/ma4/handlungssituationen/
+  - /v2/cluster-math/ma4/handlungssituationen/
 title: Handlungssituationen
 weight: 20
 draft: false

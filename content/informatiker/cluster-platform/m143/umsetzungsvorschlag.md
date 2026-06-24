@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-platform/m143/umsetzungsvorschlag/
+  - /v2/cluster-platform/m143/umsetzungsvorschlag/
 title: Umsetzungsvorschlag
 weight: 10
 draft: false

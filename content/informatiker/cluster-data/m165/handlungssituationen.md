@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-data/m165/handlungssituationen/
+  - /v2/cluster-data/m165/handlungssituationen/
 title: Handlungssituationen
 weight: 20
 draft: false

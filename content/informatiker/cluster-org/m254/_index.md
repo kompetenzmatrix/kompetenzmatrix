@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-org/m254/
+  - /v2/cluster-org/m254/
 title: M254 Geschäftsprozesse im eigenen Berufsumfeld beschreiben
 modul: m254
 cluster: cluster-org

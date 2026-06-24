@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-data/m165/
+  - /v2/cluster-data/m165/
 title: M165 NoSQL-Datenbanken einsetzen
 modul: m165
 cluster: cluster-data

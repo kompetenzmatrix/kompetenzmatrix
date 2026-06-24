@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-data/m231/umsetzungsvorschlag/
+  - /v2/cluster-data/m231/umsetzungsvorschlag/
 title: Umsetzungsvorschlag
 weight: 10
 draft: false

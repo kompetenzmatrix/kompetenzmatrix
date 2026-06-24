@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-data/m164/
+  - /v2/cluster-data/m164/
 title: M164 Datenbanken erstellen und Daten einfügen
 modul: m164
 cluster: cluster-data

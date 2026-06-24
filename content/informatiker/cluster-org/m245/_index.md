@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-org/m245/
+  - /v2/cluster-org/m245/
 title: M245 Innovative ICT-Lösungen umsetzen
 modul: m245
 cluster: cluster-org

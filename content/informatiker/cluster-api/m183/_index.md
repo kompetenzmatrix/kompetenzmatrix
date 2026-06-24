@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-api/m183/
+  - /v2/cluster-api/m183/
 title: M183 Applikationssicherheit implementieren
 modul: m183
 cluster: cluster-api

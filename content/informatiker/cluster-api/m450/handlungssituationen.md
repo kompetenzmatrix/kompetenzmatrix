@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-api/m450/handlungssituationen/
+  - /v2/cluster-api/m450/handlungssituationen/
 title: Handlungssituationen
 weight: 20
 draft: false

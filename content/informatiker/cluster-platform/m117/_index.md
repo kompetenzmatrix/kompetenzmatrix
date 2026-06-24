@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-platform/m117/
+  - /v2/cluster-platform/m117/
 title: M117 Informatik- und Netzinfrastruktur für ein kleines Unternehmen realisieren
 modul: m117
 cluster: cluster-platform

@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-platform/m184/
+  - /v2/cluster-platform/m184/
 title: M184 Netzwerksicherheit implementieren
 modul: m184
 cluster: cluster-platform

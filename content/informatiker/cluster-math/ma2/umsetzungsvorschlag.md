@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-math/ma2/umsetzungsvorschlag/
+  - /v2/cluster-math/ma2/umsetzungsvorschlag/
 title: Umsetzungsvorschlag
 weight: 10
 draft: false

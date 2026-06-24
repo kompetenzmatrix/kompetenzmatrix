@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-api/m450/
+  - /v2/cluster-api/m450/
 title: M450 Applikationen testen
 modul: m450
 cluster: cluster-api

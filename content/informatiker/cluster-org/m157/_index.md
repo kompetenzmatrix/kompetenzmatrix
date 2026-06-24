@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-org/m157/
+  - /v2/cluster-org/m157/
 title: M157 IT-System-Einführung planen und durchführen
 modul: m157
 cluster: cluster-org

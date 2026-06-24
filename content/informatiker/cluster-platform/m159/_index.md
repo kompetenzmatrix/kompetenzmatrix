@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-platform/m159/
+  - /v2/cluster-platform/m159/
 title: M159 Directoryservices konfigurieren und in Betrieb nehmen
 modul: m159
 cluster: cluster-platform

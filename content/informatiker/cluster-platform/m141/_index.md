@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-platform/m141/
+  - /v2/cluster-platform/m141/
 title: M141 Datenbanksystem in Betrieb nehmen
 modul: m141
 cluster: cluster-platform

@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-cloud/m169/
+  - /v2/cluster-cloud/m169/
 title: M169 Dienste mit Containern bereitstellen
 modul: m169
 cluster: cluster-cloud

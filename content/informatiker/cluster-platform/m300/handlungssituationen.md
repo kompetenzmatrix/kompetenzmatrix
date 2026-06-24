@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-platform/m300/handlungssituationen/
+  - /v2/cluster-platform/m300/handlungssituationen/
 title: Handlungssituationen
 weight: 20
 draft: false

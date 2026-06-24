@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-platform/m129/
+  - /v2/cluster-platform/m129/
 title: M129 LAN-Komponenten in Betrieb nehmen
 modul: m129
 cluster: cluster-platform

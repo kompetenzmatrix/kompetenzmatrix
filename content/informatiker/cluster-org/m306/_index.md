@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-org/m306/
+  - /v2/cluster-org/m306/
 title: M306 Kleinprojekte im eigenen Berufsumfeld abwickeln
 modul: m306
 cluster: cluster-org

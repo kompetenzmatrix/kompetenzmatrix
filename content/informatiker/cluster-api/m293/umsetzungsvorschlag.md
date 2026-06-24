@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-api/m293/umsetzungsvorschlag/
+  - /v2/cluster-api/m293/umsetzungsvorschlag/
 title: Umsetzungsvorschlag
 weight: 10
 draft: false

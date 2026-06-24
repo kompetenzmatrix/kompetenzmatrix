@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-math/ma2/
+  - /v2/cluster-math/ma2/
 title: MA2
 modul: ma2
 cluster: cluster-math

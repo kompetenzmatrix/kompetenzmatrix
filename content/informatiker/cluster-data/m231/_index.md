@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-data/m231/
+  - /v2/cluster-data/m231/
 title: M231 Datenschutz und Datensicherheit anwenden
 modul: m231
 cluster: cluster-data

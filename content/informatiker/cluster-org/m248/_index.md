@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-org/m248/
+  - /v2/cluster-org/m248/
 title: M248 ICT-Lösungen mit aktuellen Technologien realisieren
 modul: m248
 cluster: cluster-org

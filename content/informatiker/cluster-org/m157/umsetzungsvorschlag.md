@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-org/m157/umsetzungsvorschlag/
+  - /v2/cluster-org/m157/umsetzungsvorschlag/
 title: Umsetzungsvorschlag
 weight: 10
 draft: false

@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-api/m426/
+  - /v2/cluster-api/m426/
 title: M426 Software mit agilen Methoden entwickeln
 modul: m426
 cluster: cluster-api

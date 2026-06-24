@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-cloud/m346/handlungssituationen/
+  - /v2/cluster-cloud/m346/handlungssituationen/
 title: Handlungssituationen
 weight: 20
 draft: false

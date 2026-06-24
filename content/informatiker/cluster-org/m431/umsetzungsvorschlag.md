@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-org/m431/umsetzungsvorschlag/
+  - /v2/cluster-org/m431/umsetzungsvorschlag/
 title: Umsetzungsvorschlag
 weight: 10
 draft: false

@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-platform/m190/
+  - /v2/cluster-platform/m190/
 title: M190 Virtualisierungsplattform aufbauen und betreiben
 modul: m190
 cluster: cluster-platform

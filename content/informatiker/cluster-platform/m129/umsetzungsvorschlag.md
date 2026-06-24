@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-platform/m129/umsetzungsvorschlag/
+  - /v2/cluster-platform/m129/umsetzungsvorschlag/
 title: Umsetzungsvorschlag
 weight: 10
 draft: false

@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-api/m293/
+  - /v2/cluster-api/m293/
 title: M293 Webauftritt erstellen und veröffentlichen
 modul: m293
 cluster: cluster-api

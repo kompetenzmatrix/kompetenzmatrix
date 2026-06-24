@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-cloud/
+  - /v2/cluster-cloud/
 title: "Cluster Cloud Computing"
 draft: false
 weight: 13

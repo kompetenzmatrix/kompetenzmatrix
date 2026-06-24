@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-org/m431/
+  - /v2/cluster-org/m431/
 title: M431 Aufträge im eigenen Berufsumfeld selbstständig durchführen
 modul: m431
 cluster: cluster-org

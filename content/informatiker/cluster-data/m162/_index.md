@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-data/m162/
+  - /v2/cluster-data/m162/
 title: M162 Daten analysieren und modellieren
 modul: m162
 cluster: cluster-data

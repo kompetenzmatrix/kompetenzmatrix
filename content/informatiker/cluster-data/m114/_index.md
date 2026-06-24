@@ -1,6 +1,7 @@
 ---
 aliases:
   - /cluster-data/m114/
+  - /v2/cluster-data/m114/
 title: M114 Codierungs- Kompressions- und Verschlüsselungsverfahren einsetzen
 modul: m114
 cluster: cluster-data
