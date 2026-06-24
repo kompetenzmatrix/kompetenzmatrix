@@ -107,3 +107,80 @@ collections:
     create: true
     identifier_field: title
     fields: *modulfelder
+
+  - name: media-projektmanagement
+    label: "Mediamatik – Projektmanagement & Auftragsabwicklung"
+    label_singular: "Modul"
+    folder: content/mediamatiker/cluster-projektmanagement
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: *modulfelder
+
+  - name: media-gestaltung
+    label: "Mediamatik – Gestaltung & Medienproduktion"
+    label_singular: "Modul"
+    folder: content/mediamatiker/cluster-gestaltung
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: *modulfelder
+
+  - name: media-av
+    label: "Mediamatik – Audiovisuelle Produktion"
+    label_singular: "Modul"
+    folder: content/mediamatiker/cluster-av
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: *modulfelder
+
+  - name: media-web
+    label: "Mediamatik – Web & Multimedia"
+    label_singular: "Modul"
+    folder: content/mediamatiker/cluster-web
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: *modulfelder
+
+  - name: media-marketing
+    label: "Mediamatik – Marketing & Kommunikation"
+    label_singular: "Modul"
+    folder: content/mediamatiker/cluster-marketing
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: *modulfelder
+
+  - name: media-ict
+    label: "Mediamatik – ICT & Applikationen"
+    label_singular: "Modul"
+    folder: content/mediamatiker/cluster-ict
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: *modulfelder
+
+  - name: media-betrieb
+    label: "Mediamatik – Betriebswirtschaft & Administration"
+    label_singular: "Modul"
+    folder: content/mediamatiker/cluster-betrieb
+    path: "{{fields.modul}}/_index"
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    identifier_field: title
+    fields: *modulfelder
