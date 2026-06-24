@@ -2,7 +2,7 @@
 title: M426 Software mit agilen Methoden entwickeln
 modul: m426
 cluster: cluster-api
-date: 2025-07-02T10:04:57Z
+date: 2025-07-02T10:04:57.000Z
 draft: false
 kompetenzbaender:
   - id: A
@@ -101,6 +101,8 @@ kompetenzbaender:
           durchführen
         erweitert: Ich kann Funktionsbereiche zur besseren Verständlichkeit so
           umschreiben, dass die (zyklomatische) Komplexität entflochten wird
+  - id: X
+    titel: asdfasdf
 ---
 ### Hinweis
 
