@@ -29,11 +29,26 @@ jobs:
 
       - name: Deploy via rsync over SSH
         env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}        # e.g. it.bzz.ch
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}        # unprivileged deploy user (NOT root)
           DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}        # e.g. /var/www/kompetenzmatrix/
+          KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
         run: |
-          mkdir -p ~/.ssh
+          set -euo pipefail
+          : "${DEPLOY_HOST:?set repo variable DEPLOY_HOST}"
+          : "${DEPLOY_USER:?set repo variable DEPLOY_USER (unprivileged, not root)}"
+          : "${DEPLOY_PATH:?set repo variable DEPLOY_PATH}"
+          if [ "$DEPLOY_USER" = "root" ]; then echo "::error::refusing to deploy as root"; exit 1; fi
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
           echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_deploy
           chmod 600 ~/.ssh/id_deploy
-          ssh-keyscan -H it.bzz.ch >> ~/.ssh/known_hosts 2>/dev/null
-          rsync -az --delete --exclude='cms-oauth/' -e "ssh -i ~/.ssh/id_deploy -o StrictHostKeyChecking=accept-new" \
-            public/ root@it.bzz.ch:"$DEPLOY_PATH"
+          # Pin the host key from a secret if provided; fall back to TOFU keyscan.
+          if [ -n "${KNOWN_HOSTS:-}" ]; then
+            printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          else
+            ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          fi
+          chmod 600 ~/.ssh/known_hosts
+          rsync -az --delete --exclude='cms-oauth/' \
+            -e "ssh -i ~/.ssh/id_deploy -o StrictHostKeyChecking=yes -o IdentitiesOnly=yes" \
+            public/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH"

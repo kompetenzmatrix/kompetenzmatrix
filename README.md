@@ -51,4 +51,21 @@ Den vollständigen Ablauf (Bearbeiten → CI → Deploy) zeigt
   GitHub-OAuth-App erstellen (Callback `https://kompetenzmatrix.ch/cms-oauth/callback`),
   `client_id`/`client_secret` in `/etc/cms-oauth-config.php` eintragen. `base_url` steht in
   `static/admin/config.yml`. Das Relay ist via `rsync --exclude=cms-oauth/` vor Deploys geschützt.
-- **Deploy-Secrets**: `DEPLOY_SSH_KEY` (Secret) + `DEPLOY_PATH` (Variable) für `root@it.bzz.ch`.
+- **Deploy** (kein root!): Auf dem Server einen **unprivilegierten** Benutzer anlegen, dem nur
+  das Web-Verzeichnis gehört:
+  ```bash
+  sudo adduser --disabled-password --gecos "" deploy
+  sudo install -d -o deploy -g www-data /var/www/kompetenzmatrix
+  sudo -u deploy mkdir -p /home/deploy/.ssh && sudo -u deploy chmod 700 /home/deploy/.ssh
+  # Public-Key des Deploy-Keys auf rsync einschränken (forced command via rrsync):
+  #   command="rrsync /var/www/kompetenzmatrix",no-pty,no-agent-forwarding,no-port-forwarding,no-X11-forwarding ssh-ed25519 AAAA... deploy
+  ```
+  Damit kann der Key (selbst wenn er leakt) **nur** in dieses Verzeichnis rsyncen — keine Shell,
+  kein root. GitHub-Konfiguration:
+  - Secret `DEPLOY_SSH_KEY` — privater Key des `deploy`-Users.
+  - Secret `DEPLOY_KNOWN_HOSTS` — Host-Key pinnen (`ssh-keyscan it.bzz.ch`); ohne ihn fällt der
+    Workflow auf TOFU-Keyscan zurück.
+  - Variablen `DEPLOY_HOST` (`it.bzz.ch`), `DEPLOY_USER` (`deploy`), `DEPLOY_PATH`. Der
+    Workflow bricht ab, falls `DEPLOY_USER=root`.
+    - **Mit** rrsync-Forced-Command: `DEPLOY_PATH` = `./` (rrsync rootet bereits auf das Verzeichnis).
+    - **Ohne** (nur unprivilegierter User, der das Verzeichnis besitzt): `DEPLOY_PATH` = `/var/www/kompetenzmatrix/`.

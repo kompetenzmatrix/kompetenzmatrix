@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """CI validation gate for competency-module bundles.
 
-Enforces the EHB rules on every content/<cluster>/<module>/_index.md:
+Enforces the EHB rules on every module matrix
+content/<fachrichtung>/<cluster>/<module>/_index.md:
   - non-ÜK modules must have at least one Kompetenzband
   - every band needs id (uppercase) + titel + at least one Kompetenz
   - every Kompetenz needs nr, hz, and all three levels (Grundlagen/Fortgeschritten/Erweitert)
   - every level text must start with "Ich kann"
+  - the markdown body must not contain raw HTML XSS sinks (goldmark runs with
+    unsafe=true and content is open-authoring, so a merged <script> would be stored XSS)
 Exits non-zero on any violation (fails the PR check).
 """
 import glob, os, re, sys
@@ -13,22 +16,28 @@ import yaml
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LEVELS = ('grundlagen', 'fortgeschritten', 'erweitert')
+# Raw-HTML sinks that enable stored XSS when rendered with goldmark unsafe=true.
+DANGEROUS_HTML = re.compile(r'<\s*(script|iframe|object|embed|svg|style|form|meta|link|base)\b'
+                            r'|javascript:|\son[a-z]+\s*=', re.I)
 
-def load_frontmatter(path):
+def split_frontmatter(path):
+    """Return (frontmatter_dict_or_None, body_str)."""
     text = open(path, encoding='utf-8').read()
     if not text.startswith('---'):
-        return None
+        return None, ''
     end = text.find('\n---', 3)
     if end == -1:
-        return None
-    return yaml.safe_load(text[3:end])
+        return None, ''
+    return yaml.safe_load(text[3:end]), text[end + 4:]
 
 def check(path):
     errs = []
-    fm = load_frontmatter(path)
+    fm, body = split_frontmatter(path)
     rel = os.path.relpath(path, ROOT)
     if fm is None:
         return [f"{rel}: no YAML frontmatter"]
+    if body and DANGEROUS_HTML.search(body):
+        errs.append(f"{rel}: body contains raw HTML/script (possible stored XSS) — remove it")
     if fm.get('uek'):
         return []  # ÜK modules legitimately have no matrix
     baender = fm.get('kompetenzbaender')
@@ -57,7 +66,10 @@ def check(path):
     return errs
 
 def main():
-    files = glob.glob(os.path.join(ROOT, 'content', '*', '*', '_index.md'))
+    # Module matrices live at content/<fachrichtung>/<cluster>/<module>/_index.md.
+    # Cluster/section index pages (content/<fachrichtung>/<cluster>/_index.md) are not
+    # modules and carry no matrix, so they are intentionally not validated here.
+    files = glob.glob(os.path.join(ROOT, 'content', '*', '*', '*', '_index.md'))
     all_errs = []
     for f in sorted(files):
         all_errs += check(f)
