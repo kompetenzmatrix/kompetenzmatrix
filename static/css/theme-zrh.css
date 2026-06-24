@@ -259,12 +259,17 @@ a:hover {
     transition: transform 0.15s ease;
     font-size: 0.8rem;
 }
-/* offen: Chevron gedreht + Kinder sichtbar */
-#sidebar ul.topics .dd-item.open > .dd-toggle i,
-#sidebar ul.topics .dd-item.parent > .dd-toggle i,
-#sidebar ul.topics .dd-item.active > .dd-toggle i {
-    transform: rotate(90deg);
+/* Theme-Zwang aufheben: aktive/Eltern-Sektion soll NICHT den ganzen
+   Unterbaum aufklappen. Default = alles zu, nur .open zeigt Kinder. */
+#sidebar ul.topics ul,
+#sidebar ul.topics li.parent ul,
+#sidebar ul.topics li.active ul {
+    display: none;
 }
+/* offen: nur direkte Kinder sichtbar + Chevron gedreht */
 #sidebar ul.topics .dd-item.open > ul {
     display: block;
+}
+#sidebar ul.topics .dd-item.open > .dd-toggle i {
+    transform: rotate(90deg);
 }

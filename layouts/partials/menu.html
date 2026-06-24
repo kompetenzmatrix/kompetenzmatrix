@@ -76,9 +76,9 @@
     {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
     <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item
         {{if ne $numberOfPages 0}}has-children{{end}}
-        {{if .IsAncestor $currentNode }}parent{{end}}
+        {{if .IsAncestor $currentNode }}parent open{{end}}
         {{if eq .File.UniqueID $currentFileUniqueID}}active{{end}}
-        {{if .Params.alwaysopen}}parent{{end}}
+        {{if .Params.alwaysopen}}open{{end}}
         ">
       <a href="{{.RelPermalink}}">
           {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
