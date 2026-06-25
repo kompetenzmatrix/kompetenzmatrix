@@ -5,7 +5,7 @@ aliases:
 title: M322 Benutzerschnittstellen entwerfen und implementieren
 modul: m322
 cluster: cluster-api
-date: "2025-07-02T10:05:05Z"
+date: 2025-07-02T10:05:05Z
 draft: false
 kompetenzbaender:
   - id: A
@@ -127,4 +127,6 @@ kompetenzbaender:
         erweitert: Ich kann geeignete Elemente für eine barrierefreie
           Benutzerschnittstelle vorschlagen und die Barrierefreiheit einer
           Benutzerschnittstelle vollständig nachweisen
+  - id: X
+    titel: asdfasdfasdf
 ---
