@@ -5,11 +5,13 @@ backend:
   # Self-hosted OAuth relay on it.bzz.ch (PHP). No Cloudflare/Netlify account needed.
   base_url: https://kompetenzmatrix.ch
   auth_endpoint: cms-oauth/auth
+  # Open authoring: any GitHub user logs in, the CMS forks the repo for them and
+  # opens a Pull Request from their fork. No collaborator access / account management.
+  # NOTE: open_authoring and auth_scope MUST live under backend: — Decap reads
+  # config.backend.open_authoring; at top level they are silently ignored.
+  open_authoring: true
+  auth_scope: public_repo
 
-# Open authoring: any GitHub user logs in, the CMS forks the repo for them and
-# opens a Pull Request from their fork. No collaborator access / account management.
-open_authoring: true
-auth_scope: public_repo
 publish_mode: editorial_workflow
 
 locale: de
