@@ -122,7 +122,7 @@ collections:
     fields: *modulfelder
 
   - name: media-gestaltung
-    label: "Mediamatik – Gestaltung & Medienproduktion"
+    label: "Mediamatik – Gestaltung"
     label_singular: "Modul"
     folder: content/mediamatiker/cluster-gestaltung
     path: "{{fields.modul}}/_index"
@@ -155,7 +155,7 @@ collections:
     fields: *modulfelder
 
   - name: media-web
-    label: "Mediamatik – Web & Multimedia"
+    label: "Mediamatik – Web"
     label_singular: "Modul"
     folder: content/mediamatiker/cluster-web
     path: "{{fields.modul}}/_index"

@@ -1,9 +1,9 @@
 ---
-title: "Web & Multimedia"
+title: "Web"
 weight: 40
 ---
 
-# Web & Multimedia
+# Web
 
 {{% notice info %}}
 **Entwurf.** Module und Kompetenzbänder für diesen Cluster werden noch erfasst.

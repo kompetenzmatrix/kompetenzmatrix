@@ -13,9 +13,9 @@ weight: 20
 Geplante Cluster (gegliedert nach Handlungskompetenzbereichen):
 
 - [Projektmanagement & Auftragsabwicklung]({{<ref "/mediamatiker/cluster-projektmanagement">}})
-- [Gestaltung & Medienproduktion]({{<ref "/mediamatiker/cluster-gestaltung">}})
+- [Gestaltung]({{<ref "/mediamatiker/cluster-gestaltung">}})
 - [Film & Fotografie]({{<ref "/mediamatiker/cluster-film-fotografie">}})
 - [Animation]({{<ref "/mediamatiker/cluster-animation">}})
-- [Web & Multimedia]({{<ref "/mediamatiker/cluster-web">}})
+- [Web]({{<ref "/mediamatiker/cluster-web">}})
 - [Marketing & Kommunikation]({{<ref "/mediamatiker/cluster-marketing">}})
 - [Betriebskommunikation & Administration]({{<ref "/mediamatiker/cluster-betrieb">}})

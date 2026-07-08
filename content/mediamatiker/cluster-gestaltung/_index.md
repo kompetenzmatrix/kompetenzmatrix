@@ -1,9 +1,9 @@
 ---
-title: "Gestaltung & Medienproduktion"
+title: "Gestaltung"
 weight: 20
 ---
 
-# Gestaltung & Medienproduktion
+# Gestaltung
 
 {{% notice info %}}
 **Entwurf.** Module und Kompetenzbänder für diesen Cluster werden noch erfasst.
