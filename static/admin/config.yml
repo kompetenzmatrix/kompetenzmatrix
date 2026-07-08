@@ -23,22 +23,13 @@ collections:
     label: "Informatik – Applikationsentwicklung"
     label_singular: "Modul"
     folder: content/informatiker/cluster-api
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    # Baum-Ansicht: Modul (_index) als Knoten, handlungssituationen /
-    # umsetzungsvorschlag als eingerückte Kind-Einträge darunter.
-    nested: &nestcfg
-      depth: 2
-      summary: "{{fields.title}}"
-    meta: &metacfg
-      path:
-        widget: string
-        label: "Pfad (Ordner)"
-        index_file: _index
     fields: &modulfelder
       - { label: "CMS-Marker", name: cms, widget: hidden, default: true }
       - { label: "Titel", name: title, widget: hidden }
@@ -76,166 +67,154 @@ collections:
     label: "Informatik – Cloud Computing"
     label_singular: "Modul"
     folder: content/informatiker/cluster-cloud
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    nested: *nestcfg
-    meta: *metacfg
     fields: *modulfelder
 
   - name: cluster-data
     label: "Informatik – Daten und Datenhaltung"
     label_singular: "Modul"
     folder: content/informatiker/cluster-data
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    nested: *nestcfg
-    meta: *metacfg
     fields: *modulfelder
 
   - name: cluster-math
     label: "Informatik – Mathematik"
     label_singular: "Modul"
     folder: content/informatiker/cluster-math
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    nested: *nestcfg
-    meta: *metacfg
     fields: *modulfelder
 
   - name: cluster-org
     label: "Informatik – Organisation und Innovation"
     label_singular: "Modul"
     folder: content/informatiker/cluster-org
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    nested: *nestcfg
-    meta: *metacfg
     fields: *modulfelder
 
   - name: cluster-platform
     label: "Informatik – Plattformentwicklung"
     label_singular: "Modul"
     folder: content/informatiker/cluster-platform
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    nested: *nestcfg
-    meta: *metacfg
     fields: *modulfelder
 
   - name: media-projektmanagement
     label: "Mediamatik – Projektmanagement & Auftragsabwicklung"
     label_singular: "Modul"
     folder: content/mediamatiker/cluster-projektmanagement
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    nested: *nestcfg
-    meta: *metacfg
     fields: *modulfelder
 
   - name: media-gestaltung
     label: "Mediamatik – Gestaltung"
     label_singular: "Modul"
     folder: content/mediamatiker/cluster-gestaltung
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    nested: *nestcfg
-    meta: *metacfg
     fields: *modulfelder
 
   - name: media-film-fotografie
     label: "Mediamatik – Film & Fotografie"
     label_singular: "Modul"
     folder: content/mediamatiker/cluster-film-fotografie
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    nested: *nestcfg
-    meta: *metacfg
     fields: *modulfelder
 
   - name: media-animation
     label: "Mediamatik – Animation"
     label_singular: "Modul"
     folder: content/mediamatiker/cluster-animation
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    nested: *nestcfg
-    meta: *metacfg
     fields: *modulfelder
 
   - name: media-web
     label: "Mediamatik – Web"
     label_singular: "Modul"
     folder: content/mediamatiker/cluster-web
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    nested: *nestcfg
-    meta: *metacfg
     fields: *modulfelder
 
   - name: media-marketing
     label: "Mediamatik – Marketing & Kommunikation"
     label_singular: "Modul"
     folder: content/mediamatiker/cluster-marketing
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    nested: *nestcfg
-    meta: *metacfg
     fields: *modulfelder
 
   - name: media-betrieb
     label: "Mediamatik – Betriebskommunikation & Administration"
     label_singular: "Modul"
     folder: content/mediamatiker/cluster-betrieb
+    path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    nested: *nestcfg
-    meta: *metacfg
     fields: *modulfelder
