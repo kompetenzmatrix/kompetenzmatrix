@@ -32,7 +32,7 @@ collections:
     # Baum-Ansicht: Modul (_index) als Knoten, handlungssituationen /
     # umsetzungsvorschlag als eingerückte Kind-Einträge darunter.
     nested: &nestcfg
-      depth: 3
+      depth: 2
       summary: "{{fields.title}}"
     meta: &metacfg
       path:
