@@ -28,6 +28,7 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: &modulfelder
       - { label: "CMS-Marker", name: cms, widget: hidden, default: true }
@@ -71,6 +72,7 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: *modulfelder
 
@@ -83,6 +85,7 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: *modulfelder
 
@@ -95,6 +98,7 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: *modulfelder
 
@@ -107,6 +111,7 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: *modulfelder
 
@@ -119,6 +124,7 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: *modulfelder
 
@@ -131,6 +137,7 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: *modulfelder
 
@@ -143,6 +150,7 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: *modulfelder
 
@@ -155,6 +163,7 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: *modulfelder
 
@@ -167,6 +176,7 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: *modulfelder
 
@@ -179,6 +189,7 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: *modulfelder
 
@@ -191,6 +202,7 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: *modulfelder
 
@@ -203,5 +215,6 @@ collections:
     format: yaml-frontmatter
     create: true
     filter: { field: cms, value: true }
+    summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
     fields: *modulfelder
