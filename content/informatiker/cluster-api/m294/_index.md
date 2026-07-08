@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-api/m294/
   - /v2/cluster-api/m294/

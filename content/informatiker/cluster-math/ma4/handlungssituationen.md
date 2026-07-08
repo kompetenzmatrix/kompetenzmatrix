@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-math/ma4/handlungssituationen/
   - /v2/cluster-math/ma4/handlungssituationen/

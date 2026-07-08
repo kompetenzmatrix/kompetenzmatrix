@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-api/m321/
   - /v2/cluster-api/m321/

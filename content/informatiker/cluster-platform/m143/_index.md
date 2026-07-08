@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-platform/m143/
   - /v2/cluster-platform/m143/

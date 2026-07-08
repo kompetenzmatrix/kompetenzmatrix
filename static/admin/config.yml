@@ -20,15 +20,17 @@ public_folder: /images
 
 collections:
   - name: cluster-api
-    label: "Applikationsentwicklung"
+    label: "Informatik – Applikationsentwicklung"
     label_singular: "Modul"
     folder: content/informatiker/cluster-api
     path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: &modulfelder
+      - { label: "CMS-Marker", name: cms, widget: hidden, default: true }
       - { label: "Titel", name: title, widget: hidden }
       - { label: "Modul (Ordnername, z.B. m183)", name: modul, widget: hidden }
       - { label: "Cluster", name: cluster, widget: hidden }
@@ -56,57 +58,62 @@ collections:
       - { label: "Weiterer Inhalt (Bloom-Analyse, Änderungsprotokoll)", name: body, widget: markdown, required: false }
 
   - name: cluster-cloud
-    label: "Cloud Computing"
+    label: "Informatik – Cloud Computing"
     label_singular: "Modul"
     folder: content/informatiker/cluster-cloud
     path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: *modulfelder
 
   - name: cluster-data
-    label: "Daten und Datenhaltung"
+    label: "Informatik – Daten und Datenhaltung"
     label_singular: "Modul"
     folder: content/informatiker/cluster-data
     path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: *modulfelder
 
   - name: cluster-math
-    label: "Mathematik"
+    label: "Informatik – Mathematik"
     label_singular: "Modul"
     folder: content/informatiker/cluster-math
     path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: *modulfelder
 
   - name: cluster-org
-    label: "Organisation und Innovation"
+    label: "Informatik – Organisation und Innovation"
     label_singular: "Modul"
     folder: content/informatiker/cluster-org
     path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: *modulfelder
 
   - name: cluster-platform
-    label: "Plattformentwicklung"
+    label: "Informatik – Plattformentwicklung"
     label_singular: "Modul"
     folder: content/informatiker/cluster-platform
     path: "{{fields.modul}}/_index"
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: *modulfelder
 
@@ -118,6 +125,7 @@ collections:
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: *modulfelder
 
@@ -129,6 +137,7 @@ collections:
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: *modulfelder
 
@@ -140,6 +149,7 @@ collections:
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: *modulfelder
 
@@ -151,6 +161,7 @@ collections:
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: *modulfelder
 
@@ -162,6 +173,7 @@ collections:
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: *modulfelder
 
@@ -173,6 +185,7 @@ collections:
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: *modulfelder
 
@@ -184,5 +197,6 @@ collections:
     extension: md
     format: yaml-frontmatter
     create: true
+    filter: { field: cms, value: true }
     identifier_field: title
     fields: *modulfelder

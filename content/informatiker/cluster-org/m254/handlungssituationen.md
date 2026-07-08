@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-org/m254/handlungssituationen/
   - /v2/cluster-org/m254/handlungssituationen/

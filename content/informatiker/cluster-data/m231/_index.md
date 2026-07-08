@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-data/m231/
   - /v2/cluster-data/m231/

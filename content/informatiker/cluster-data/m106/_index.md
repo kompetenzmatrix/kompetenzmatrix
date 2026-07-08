@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-data/m106/
   - /v2/cluster-data/m106/

@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-math/ma1/
   - /v2/cluster-math/ma1/

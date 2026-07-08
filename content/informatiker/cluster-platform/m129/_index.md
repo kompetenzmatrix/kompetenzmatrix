@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-platform/m129/
   - /v2/cluster-platform/m129/

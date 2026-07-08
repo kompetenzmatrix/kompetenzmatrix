@@ -12,6 +12,7 @@
     "date": { "type": "string" },
     "draft": { "type": "boolean" },
     "uek": { "type": "boolean", "description": "true = ÜK module without a matrix" },
+    "cms": { "type": "boolean", "description": "Decap CMS marker: true on editable leaf docs (module _index, umsetzungsvorschlag, handlungssituationen). Absent on cluster overview pages so they stay hidden from the CMS." },
     "idorder": { "type": "string", "enum": ["num_lvl", "lvl_num"], "description": "Cell-id order: A1G (num_lvl, default) vs WG1 (lvl_num)" },
     "kompetenzbaender": {
       "type": "array",

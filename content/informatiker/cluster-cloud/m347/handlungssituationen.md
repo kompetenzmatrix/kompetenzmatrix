@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-cloud/m347/handlungssituationen/
   - /v2/cluster-cloud/m347/handlungssituationen/

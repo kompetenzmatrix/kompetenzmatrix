@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-math/ma3/umsetzungsvorschlag/
   - /v2/cluster-math/ma3/umsetzungsvorschlag/

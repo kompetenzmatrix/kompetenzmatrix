@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-platform/m187/
   - /v2/cluster-platform/m187/

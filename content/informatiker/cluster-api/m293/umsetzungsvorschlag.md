@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-api/m293/umsetzungsvorschlag/
   - /v2/cluster-api/m293/umsetzungsvorschlag/

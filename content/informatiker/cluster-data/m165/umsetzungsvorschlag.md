@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-data/m165/umsetzungsvorschlag/
   - /v2/cluster-data/m165/umsetzungsvorschlag/

@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-org/m158/
   - /v2/cluster-org/m158/

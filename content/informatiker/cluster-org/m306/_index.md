@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-org/m306/
   - /v2/cluster-org/m306/

@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-platform/m145/
   - /v2/cluster-platform/m145/

@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-platform/m300/umsetzungsvorschlag/
   - /v2/cluster-platform/m300/umsetzungsvorschlag/

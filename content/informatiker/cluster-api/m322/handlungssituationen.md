@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-api/m322/handlungssituationen/
   - /v2/cluster-api/m322/handlungssituationen/

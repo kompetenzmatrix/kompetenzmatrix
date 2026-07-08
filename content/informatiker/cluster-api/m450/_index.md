@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-api/m450/
   - /v2/cluster-api/m450/

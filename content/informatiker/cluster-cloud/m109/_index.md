@@ -1,4 +1,5 @@
 ---
+cms: true
 aliases:
   - /cluster-cloud/m109/
   - /v2/cluster-cloud/m109/
