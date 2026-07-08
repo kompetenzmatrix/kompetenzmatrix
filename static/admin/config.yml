@@ -29,10 +29,12 @@ collections:
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
-    # Baum-Ansicht: Modul-Ordner als Knoten, handlungssituationen /
-    # umsetzungsvorschlag eingerückt darunter. subfolders:false erlaubt
-    # einzelne .md-Blätter neben dem _index; index_file _index = Matrix
-    # als Ordner-Doku (öffnet beim Modul-Klick als eigene Seite).
+    # Baum-Ansicht: Modul-Ordner ist ein Container-Knoten. Beim Anklicken des
+    # Moduls werden seine drei Seiten als eigene, eingerückte Einträge gelistet:
+    # Matrix (_index.md), handlungssituationen.md, umsetzungsvorschlag.md.
+    # subfolders:false erlaubt einzelne .md-Blätter. index_file bewusst auf
+    # "index" gesetzt (kein Match auf "_index") -> die Matrix erscheint als
+    # eigene wählbare Seite statt als nicht-listbare Ordner-Doku.
     nested: &nestcfg
       depth: 3
       subfolders: false
@@ -41,7 +43,7 @@ collections:
       path:
         widget: string
         label: "Pfad (Ordner)"
-        index_file: _index
+        index_file: index
     fields: &modulfelder
       - { label: "CMS-Marker", name: cms, widget: hidden, default: true }
       - { label: "Titel", name: title, widget: hidden }
