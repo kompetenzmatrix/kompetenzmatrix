@@ -35,6 +35,11 @@ collections:
       - { label: "Modul (Ordnername, z.B. m183)", name: modul, widget: hidden }
       - { label: "Cluster", name: cluster, widget: hidden }
       - { label: "Datum", name: date, widget: hidden, required: false }
+      # Passthrough: keep frontmatter Decap would otherwise strip on save
+      # (aliases = old URLs, weight = ordering of umsetzung/handlung, draft).
+      - { label: "Aliases", name: aliases, widget: hidden, required: false }
+      - { label: "Reihenfolge", name: weight, widget: hidden, required: false }
+      - { label: "Entwurf", name: draft, widget: hidden, required: false }
       - { label: "ID-Reihenfolge", name: idorder, widget: hidden, required: false }
       - { label: "ÜK-Modul (keine Matrix)", name: uek, widget: hidden, default: false, required: false }
       - label: "Kompetenzbänder"
