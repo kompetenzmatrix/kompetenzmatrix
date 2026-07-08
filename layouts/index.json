@@ -2,7 +2,9 @@
 {{- if ne $page.Type "json" -}}
 {{- /* Modul-Unterseiten (Umsetzungsvorschlag, Handlungssituationen, …) NICHT indexieren,
        damit eine Suche nach der Modulnummer nur die Modul-Hauptseite zurückgibt. */ -}}
-{{- if and (eq $page.Kind "page") $page.Parent.Params.modul -}}
+{{- $isSub := false -}}
+{{- with $page.Parent }}{{ if .Params.modul }}{{ $isSub = true }}{{ end }}{{ end -}}
+{{- if $isSub -}}
 {{- else -}}
 {{- if and $index (gt $index 0) -}},{{- end }}
 {
