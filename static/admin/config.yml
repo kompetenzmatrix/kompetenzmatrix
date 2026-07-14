@@ -21,7 +21,7 @@ public_folder: /images
 collections:
   - name: cluster-api
     label: "Informatik – Applikationsentwicklung"
-    label_singular: "Modul"
+    label_singular: "Modul: Informatik – Applikationsentwicklung"
     folder: content/informatiker/cluster-api
     extension: md
     format: yaml-frontmatter
@@ -77,7 +77,7 @@ collections:
 
   - name: cluster-cloud
     label: "Informatik – Cloud Computing"
-    label_singular: "Modul"
+    label_singular: "Modul: Informatik – Cloud Computing"
     folder: content/informatiker/cluster-cloud
     extension: md
     format: yaml-frontmatter
@@ -91,7 +91,7 @@ collections:
 
   - name: cluster-data
     label: "Informatik – Daten und Datenhaltung"
-    label_singular: "Modul"
+    label_singular: "Modul: Informatik – Daten und Datenhaltung"
     folder: content/informatiker/cluster-data
     extension: md
     format: yaml-frontmatter
@@ -105,7 +105,7 @@ collections:
 
   - name: cluster-math
     label: "Informatik – Mathematik"
-    label_singular: "Modul"
+    label_singular: "Modul: Informatik – Mathematik"
     folder: content/informatiker/cluster-math
     extension: md
     format: yaml-frontmatter
@@ -119,7 +119,7 @@ collections:
 
   - name: cluster-org
     label: "Informatik – Organisation und Innovation"
-    label_singular: "Modul"
+    label_singular: "Modul: Informatik – Organisation und Innovation"
     folder: content/informatiker/cluster-org
     extension: md
     format: yaml-frontmatter
@@ -133,7 +133,7 @@ collections:
 
   - name: cluster-platform
     label: "Informatik – Plattformentwicklung"
-    label_singular: "Modul"
+    label_singular: "Modul: Informatik – Plattformentwicklung"
     folder: content/informatiker/cluster-platform
     extension: md
     format: yaml-frontmatter
@@ -147,7 +147,7 @@ collections:
 
   - name: media-projektmanagement
     label: "Mediamatik – Projektmanagement & Auftragsabwicklung"
-    label_singular: "Modul"
+    label_singular: "Modul: Mediamatik – Projektmanagement & Auftragsabwicklung"
     folder: content/mediamatiker/cluster-projektmanagement
     extension: md
     format: yaml-frontmatter
@@ -161,7 +161,7 @@ collections:
 
   - name: media-gestaltung
     label: "Mediamatik – Gestaltung"
-    label_singular: "Modul"
+    label_singular: "Modul: Mediamatik – Gestaltung"
     folder: content/mediamatiker/cluster-gestaltung
     extension: md
     format: yaml-frontmatter
@@ -175,7 +175,7 @@ collections:
 
   - name: media-film-fotografie
     label: "Mediamatik – Film & Fotografie"
-    label_singular: "Modul"
+    label_singular: "Modul: Mediamatik – Film & Fotografie"
     folder: content/mediamatiker/cluster-film-fotografie
     extension: md
     format: yaml-frontmatter
@@ -189,7 +189,7 @@ collections:
 
   - name: media-animation
     label: "Mediamatik – Animation"
-    label_singular: "Modul"
+    label_singular: "Modul: Mediamatik – Animation"
     folder: content/mediamatiker/cluster-animation
     extension: md
     format: yaml-frontmatter
@@ -203,7 +203,7 @@ collections:
 
   - name: media-web
     label: "Mediamatik – Web"
-    label_singular: "Modul"
+    label_singular: "Modul: Mediamatik – Web"
     folder: content/mediamatiker/cluster-web
     extension: md
     format: yaml-frontmatter
@@ -217,7 +217,7 @@ collections:
 
   - name: media-marketing
     label: "Mediamatik – Marketing & Kommunikation"
-    label_singular: "Modul"
+    label_singular: "Modul: Mediamatik – Marketing & Kommunikation"
     folder: content/mediamatiker/cluster-marketing
     extension: md
     format: yaml-frontmatter
@@ -231,7 +231,7 @@ collections:
 
   - name: media-betrieb
     label: "Mediamatik – Betriebskommunikation & Administration"
-    label_singular: "Modul"
+    label_singular: "Modul: Mediamatik – Betriebskommunikation & Administration"
     folder: content/mediamatiker/cluster-betrieb
     extension: md
     format: yaml-frontmatter
