@@ -25,7 +25,7 @@ collections:
     folder: content/informatiker/cluster-api
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
@@ -81,7 +81,7 @@ collections:
     folder: content/informatiker/cluster-cloud
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
@@ -95,7 +95,7 @@ collections:
     folder: content/informatiker/cluster-data
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
@@ -109,7 +109,7 @@ collections:
     folder: content/informatiker/cluster-math
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
@@ -123,7 +123,7 @@ collections:
     folder: content/informatiker/cluster-org
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
@@ -137,7 +137,7 @@ collections:
     folder: content/informatiker/cluster-platform
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
@@ -151,7 +151,7 @@ collections:
     folder: content/mediamatiker/cluster-projektmanagement
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
@@ -165,7 +165,7 @@ collections:
     folder: content/mediamatiker/cluster-gestaltung
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
@@ -179,7 +179,7 @@ collections:
     folder: content/mediamatiker/cluster-film-fotografie
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
@@ -193,7 +193,7 @@ collections:
     folder: content/mediamatiker/cluster-animation
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
@@ -207,7 +207,7 @@ collections:
     folder: content/mediamatiker/cluster-web
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
@@ -221,7 +221,7 @@ collections:
     folder: content/mediamatiker/cluster-marketing
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
@@ -235,7 +235,7 @@ collections:
     folder: content/mediamatiker/cluster-betrieb
     extension: md
     format: yaml-frontmatter
-    create: true
+    create: false
     filter: { field: cms, value: true }
     summary: "{{fields.title}} · {{dirname}}"
     identifier_field: title
